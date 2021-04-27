@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Youtube Comment Finder{% endblock %}
+{%block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css')}}">
+{% endblock %}
+{% block content %}
+<form action="#" method="post">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">조질 영상</label>
+        <input type="url" name="url" class="form-control bg-custom" id="exampleFormControlInput1" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">조질 단어</label>
+        <input type="text" name="term" class="form-control bg-custom" id="exampleFormControlInput1" placeholder="니갸르" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">최대 찾을 개수</label>
+        <input type="number" name="maxresults" class="form-control bg-custom" id="exampleFormControlInput1" placeholder="100" min="1" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">찾기 조건</label>
+        <select name="condition" class="form-control bg-custom" id="exampleFormControlSelect1" required>
+          <option>Full Comment Text</option>
+          <option>Partial Comment Text</option>
+        </select>
+    </div>
+    <button type="submit" value="submit" class="btn bg-custom">조지기</button>
+</form>
+{% endblock %}
