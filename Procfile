@@ -1,1 +1,1 @@
-web: gunicorn gartv:app
+web: gunicorn app:app
